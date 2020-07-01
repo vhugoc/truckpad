@@ -10,8 +10,8 @@ mongoose.connect(`mongodb+srv://${database_auth.user}:${database_auth.password}@
     useUnifiedTopology: true
 });
 
-app.use(router);
 app.use(express.json());
+app.use(router);
 
 app.listen(3333, () => {
   console.log("Listening on port 3333");
